@@ -1,0 +1,10 @@
+frontend/node_modules/
+frontend/dist/
+backend/.venv/
+backend/**/__pycache__/
+__pycache__/
+*.py[cod]
+tmp/
+.env
+.env.*
+!.env.example

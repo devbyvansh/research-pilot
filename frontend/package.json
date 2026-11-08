@@ -1,0 +1,9 @@
+{
+  "name": "researchpilot-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"dev": "vite", "build": "vite build && node scripts/generate-seo.mjs", "preview": "vite preview"},
+  "dependencies": {"@vitejs/plugin-react": "latest", "vite": "latest", "typescript": "latest", "react": "latest", "react-dom": "latest", "lucide-react": "^0.468.0", "@supabase/supabase-js": "^2.57.0"},
+  "devDependencies": {}
+}
