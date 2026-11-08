@@ -7,15 +7,15 @@ from PIL import Image, ImageChops
 
 PUBLIC = Path(__file__).resolve().parents[1] / "public"
 SOURCE = PUBLIC / "researchpilot-icon-master.png"
-BRAND = PUBLIC / "researchpilot-logo.png"
+BRAND = PUBLIC / "researchpilot-logo-light.png"
 SIZES = {
-    "favicon-16.png": 16,
-    "favicon-32.png": 32,
-    "favicon-48.png": 48,
-    "icon-32.png": 32,
-    "icon-180.png": 180,
-    "icon-192.png": 192,
-    "icon-512.png": 512,
+    "favicon-light-16.png": 16,
+    "favicon-light-32.png": 32,
+    "favicon-light-48.png": 48,
+    "researchpilot-icon-light-32.png": 32,
+    "researchpilot-icon-light-180.png": 180,
+    "researchpilot-icon-light-192.png": 192,
+    "researchpilot-icon-light-512.png": 512,
 }
 
 
@@ -47,7 +47,7 @@ def main() -> None:
         icon = mark.resize((size, size), Image.Resampling.LANCZOS)
         icon.save(PUBLIC / filename, optimize=True)
 
-    mark.resize((48, 48), Image.Resampling.LANCZOS).save(PUBLIC / "favicon.ico", format="ICO")
+    mark.resize((48, 48), Image.Resampling.LANCZOS).save(PUBLIC / "favicon-light.ico", format="ICO")
 
 
 if __name__ == "__main__":
