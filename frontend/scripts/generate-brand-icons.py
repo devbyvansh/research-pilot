@@ -2,19 +2,20 @@
 
 from pathlib import Path
 
-from PIL import Image, ImageChops, ImageDraw
+from PIL import Image, ImageChops
 
 
 PUBLIC = Path(__file__).resolve().parents[1] / "public"
 SOURCE = PUBLIC / "researchpilot-icon-master.png"
-BRAND = PUBLIC / "researchpilot-brand-v2.png"
+BRAND = PUBLIC / "researchpilot-logo.png"
 SIZES = {
-    "favicon-16-v2.png": 16,
-    "favicon-32-v2.png": 32,
-    "favicon-48-v2.png": 48,
-    "icon-180-v2.png": 180,
-    "icon-192-v2.png": 192,
-    "icon-512-v2.png": 512,
+    "favicon-16.png": 16,
+    "favicon-32.png": 32,
+    "favicon-48.png": 48,
+    "icon-32.png": 32,
+    "icon-180.png": 180,
+    "icon-192.png": 192,
+    "icon-512.png": 512,
 }
 
 
@@ -46,7 +47,7 @@ def main() -> None:
         icon = mark.resize((size, size), Image.Resampling.LANCZOS)
         icon.save(PUBLIC / filename, optimize=True)
 
-    mark.resize((48, 48), Image.Resampling.LANCZOS).save(PUBLIC / "favicon-v2.ico")
+    mark.resize((48, 48), Image.Resampling.LANCZOS).save(PUBLIC / "favicon.ico", format="ICO")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
-const CACHE = 'researchpilot-v7'
-const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/researchpilot-brand-v2.png', '/social-card.png', '/favicon-v2.ico', '/favicon-16-v2.png', '/favicon-32-v2.png', '/favicon-48-v2.png', '/icon-32-v2.png', '/icon-180-v2.png', '/icon-192-v2.png', '/icon-512-v2.png']
+const CACHE = 'researchpilot-v8'
+const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/researchpilot-logo.png', '/social-card.png', '/favicon.ico', '/favicon-16.png', '/favicon-32.png', '/favicon-48.png', '/icon-32.png', '/icon-180.png', '/icon-192.png', '/icon-512.png']
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting())))
 self.addEventListener('activate', event => event.waitUntil(Promise.all([caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key)))), self.clients.claim()])))
 self.addEventListener('fetch', event => {

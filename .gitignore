@@ -1,10 +1,22 @@
 frontend/node_modules/
 frontend/dist/
-backend/.venv/
-backend/**/__pycache__/
+**/node_modules/
+**/dist/
+**/.venv/
+venv/
+**/__pycache__/
 __pycache__/
 *.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vercel/
+*.log
+*.tmp
+*.temp
 tmp/
+backend/app/_patch_chunks.txt
+frontend/public/Dark Mode Ribbon Document Icon.png
 .env
 .env.*
 !.env.example
